@@ -40,18 +40,27 @@ class TopBarManager {
         for i in 1...spaceCount {
             let topItem = topBar.statusItem(withLength: NSStatusItem.variableLength)
             topItem.button?.title = " \(i) - \(spaceLabels[UInt8(i)] ?? defaultSpaceName)"
-            topItem.button?.isTransparent = false
-            topItem.button?.wantsLayer = true
-            topItem.button?.layer?.cornerRadius = 4
-            topItem.button?.layer?.backgroundColor = NSColor.black.cgColor
             
+            topItem.button?.wantsLayer = true
+            styleInactive(button: topItem.button!)
             if i == focusedId {
-                topItem.button?.layer?.backgroundColor = NSColor.white.cgColor
+                styleActive(button: topItem.button!)
             }
 
-            buttons.append(topItem.button);
-            topBarItems.append(topItem) ;
+            buttons.append(topItem.button)
+            topBarItems.append(topItem)
         }
+    }
+    
+    private func styleActive(button: NSStatusBarButton) {
+        button.image?.isTemplate = true
+        button.font = NSFont.systemFont(ofSize: 16, weight: .bold)
+        button.attributedTitle = NSAttributedString(string: button.title, attributes: [.foregroundColor: NSColor.controlAccentColor])
+    }
+    
+    private func styleInactive(button: NSStatusBarButton) {
+        button.font = NSFont.systemFont(ofSize: 13, weight: .regular)
+        button.attributedTitle = NSAttributedString(string: button.title, attributes: [.foregroundColor: NSColor.white])
     }
     
     public func refresh() {
@@ -67,12 +76,9 @@ class TopBarManager {
         for (index, item) in topBarItems.enumerated() {
             DispatchQueue.main.async {
                 if index + 1 == self.focusedId {
-                    item.button?.layer?.backgroundColor = NSColor.white.cgColor
-                    item.button?.font = NSFont.systemFont(ofSize: 16, weight: .bold)
-                    item.button?.attributedTitle = NSAttributedString(string: item.button?.title ?? "Unknown", attributes: [.foregroundColor: NSColor.black])
+                    self.styleActive(button: item.button!)
                 } else {
-                    item.button?.layer?.backgroundColor = NSColor.black.cgColor
-                    item.button?.attributedTitle = NSAttributedString(string: item.button?.title ?? "Unknown", attributes: [.foregroundColor: NSColor.white])
+                    self.styleInactive(button: item.button!)
                 }
             }
         }
