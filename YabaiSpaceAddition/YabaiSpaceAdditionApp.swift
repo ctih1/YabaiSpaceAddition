@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct YabaiSpaceAdditionApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

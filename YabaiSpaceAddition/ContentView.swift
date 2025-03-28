@@ -10,10 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Yabai spaces integration with the top bar")
+               
+            Button("Kill me") {
+                do {
+                    let manager = try SpaceManager()
+                    let amount = manager.getNumberOfSpaces()
+                    let labels = manager.getSpaceNames()
+                    let focused = manager.getFocusedSpace()
+                    
+                    print("Amount: \(amount) Focused: \(focused) labels: \(labels)")
+                } catch let error {
+                    print(error)
+                }
+
+
+            }
         }
         .padding()
     }

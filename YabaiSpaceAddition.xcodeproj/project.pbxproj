@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E66F5C52D95BE4B0010256B /* SocketListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66F5C42D95BE4B0010256B /* SocketListener.swift */; };
 		8EBC3A682D944AA6004505FB /* YabaiSpaceAdditionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A672D944AA6004505FB /* YabaiSpaceAdditionApp.swift */; };
 		8EBC3A6A2D944AA6004505FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A692D944AA6004505FB /* ContentView.swift */; };
 		8EBC3A6C2D944AA8004505FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC3A6B2D944AA8004505FB /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 		8EBC3A7A2D944AA8004505FB /* YabaiSpaceAdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A792D944AA8004505FB /* YabaiSpaceAdditionTests.swift */; };
 		8EBC3A842D944AA8004505FB /* YabaiSpaceAdditionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A832D944AA8004505FB /* YabaiSpaceAdditionUITests.swift */; };
 		8EBC3A862D944AA8004505FB /* YabaiSpaceAdditionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A852D944AA8004505FB /* YabaiSpaceAdditionUITestsLaunchTests.swift */; };
+		8EBC3A932D944AED004505FB /*  TopBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A922D944AED004505FB /*  TopBarManager.swift */; };
+		8EBC3A952D944CF6004505FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A942D944CF6004505FB /* AppDelegate.swift */; };
+		8EBC3A972D946717004505FB /* SpaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBC3A962D946717004505FB /* SpaceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E66F5C42D95BE4B0010256B /* SocketListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketListener.swift; sourceTree = "<group>"; };
 		8EBC3A642D944AA6004505FB /* YabaiSpaceAddition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YabaiSpaceAddition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBC3A672D944AA6004505FB /* YabaiSpaceAdditionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabaiSpaceAdditionApp.swift; sourceTree = "<group>"; };
 		8EBC3A692D944AA6004505FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +50,9 @@
 		8EBC3A7F2D944AA8004505FB /* YabaiSpaceAdditionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YabaiSpaceAdditionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EBC3A832D944AA8004505FB /* YabaiSpaceAdditionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabaiSpaceAdditionUITests.swift; sourceTree = "<group>"; };
 		8EBC3A852D944AA8004505FB /* YabaiSpaceAdditionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YabaiSpaceAdditionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EBC3A922D944AED004505FB /*  TopBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " TopBarManager.swift"; sourceTree = "<group>"; };
+		8EBC3A942D944CF6004505FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EBC3A962D946717004505FB /* SpaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				8EBC3A6B2D944AA8004505FB /* Assets.xcassets */,
 				8EBC3A702D944AA8004505FB /* YabaiSpaceAddition.entitlements */,
 				8EBC3A6D2D944AA8004505FB /* Preview Content */,
+				8EBC3A922D944AED004505FB /*  TopBarManager.swift */,
+				8EBC3A942D944CF6004505FB /* AppDelegate.swift */,
+				8EBC3A962D946717004505FB /* SpaceManager.swift */,
+				8E66F5C42D95BE4B0010256B /* SocketListener.swift */,
 			);
 			path = YabaiSpaceAddition;
 			sourceTree = "<group>";
@@ -259,7 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBC3A952D944CF6004505FB /* AppDelegate.swift in Sources */,
 				8EBC3A6A2D944AA6004505FB /* ContentView.swift in Sources */,
+				8E66F5C52D95BE4B0010256B /* SocketListener.swift in Sources */,
+				8EBC3A932D944AED004505FB /*  TopBarManager.swift in Sources */,
+				8EBC3A972D946717004505FB /* SpaceManager.swift in Sources */,
 				8EBC3A682D944AA6004505FB /* YabaiSpaceAdditionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
