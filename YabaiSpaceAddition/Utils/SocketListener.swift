@@ -27,8 +27,7 @@ class SockListener {
             fatalError("Error creating socket")
         }
         var addr = sockaddr_un()
-        
-        
+         
         addr.sun_family = sa_family_t(AF_UNIX)
         
         let pathBytes = targetSocket.utf8CString

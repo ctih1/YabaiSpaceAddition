@@ -39,7 +39,8 @@ class TopBarManager {
         
         for i in 1...spaceCount {
             let topItem = topBar.statusItem(withLength: NSStatusItem.variableLength)
-            topItem.button?.title = " \(i) - \(spaceLabels[UInt8(i)] ?? defaultSpaceName)"
+            let spaceName: String = spaceLabels[UInt8(i)] ?? defaultSpaceName
+            topItem.button?.title = " \(i) - \(spaceName) \(SettingsManager().emojiKeys[spaceName] ?? "")"
             
             topItem.button?.wantsLayer = true
             styleInactive(button: topItem.button!)
@@ -54,12 +55,12 @@ class TopBarManager {
     
     private func styleActive(button: NSStatusBarButton) {
         button.image?.isTemplate = true
-        button.font = NSFont.systemFont(ofSize: 16, weight: .bold)
+        button.font = NSFont.systemFont(ofSize: CGFloat(SettingsManager().focusedFontSize), weight: .bold)
         button.attributedTitle = NSAttributedString(string: button.title, attributes: [.foregroundColor: NSColor.controlAccentColor])
     }
     
     private func styleInactive(button: NSStatusBarButton) {
-        button.font = NSFont.systemFont(ofSize: 13, weight: .regular)
+        button.font = NSFont.systemFont(ofSize: CGFloat(SettingsManager().unfocusedFontSize), weight: .regular)
         button.attributedTitle = NSAttributedString(string: button.title, attributes: [.foregroundColor: NSColor.white])
     }
     
