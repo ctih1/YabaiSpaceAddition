@@ -1,6 +1,9 @@
 # YabaiSpaceAddition
 A simple utility that displays the space and its title you're currently in
 
+![Näyttökuva 2025-3-30 kello 10 21 26](https://github.com/user-attachments/assets/bbad7101-02be-4923-bbb3-1a5ebbef1ee2)
+
+
 ## Installation
 Open the app, and add the following to your yabai config 
 ```
